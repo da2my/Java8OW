@@ -25,6 +25,9 @@ public class MainEncapsulacion {
 		Servicio s = new Servicio();
 		
 		s.addPersona(p);
+		p.setDni("51717016K");
+		s.editarPersona(p);
+		s.eliminarPersona(p);
 		
 		for(Persona per : s.listarTodasPersonas()) {
 			System.out.print(per);

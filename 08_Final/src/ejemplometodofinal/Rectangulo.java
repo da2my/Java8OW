@@ -45,7 +45,7 @@ public class Rectangulo {
 	}
 	
 	
-	final public float getArea() {
+	final public float getArea() {//Metodo final
 		System.out.println("Area de un rectángulo");
 		return base*altura;
 	}

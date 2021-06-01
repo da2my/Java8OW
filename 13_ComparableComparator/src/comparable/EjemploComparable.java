@@ -27,7 +27,7 @@ public class EjemploComparable {
 		listaPersonas.add(new Persona("45678901D", "Mar�a", "L�pez", LocalDate.of(1993, 4, 5)));
 
 		// Este metodo ordena una coleccion segun el orden
-		// definido por Comparable. Mediante el metodo sort() de la interaz Collection
+		// definido por Comparable. Mediante el metodo sort() de la interaz Collection (tiene mas metodos esta interfaz)
 		Collections.sort(listaPersonas);
 
 		for (Persona p : listaPersonas)

@@ -13,7 +13,7 @@ import java.util.List;
 public class Persona {
 	
 	private String nombre;
-	private List<Viaje> viajes = new ArrayList<>();
+	private List<Viaje> viajes = new ArrayList<>();//lista de paises que han visistado; de viajes que han realizado
 
 	public Persona(String nombre) {
 		this.nombre = nombre;

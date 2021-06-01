@@ -14,7 +14,7 @@ public class EjemploPlanetas {
 	 */
 	public static void main(String[] args) {
 		
-		double pesoEnLaTierra = 75.0;
+		double pesoEnLaTierra = 63.0;
         double masaEnLaTierra = pesoEnLaTierra/ Planeta.TIERRA.gravedadSuperficial();
         for (Planeta p : Planeta.values())//recorremos con el metodo values() todos los planetas
            System.out.printf("Tu peso en %s es %f%n", p, p.pesoEnLaSuperficie(masaEnLaTierra));

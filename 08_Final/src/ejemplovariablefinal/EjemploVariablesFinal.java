@@ -40,9 +40,10 @@ public class EjemploVariablesFinal {
 		// matrimonio1 = matrimonio2;
 
 		// Podemos referenciar a un objeto referenciado como final,
-		// desde una referencia que no es final. Si ponemos asociar p2, que es otra
+		// desde una referencia que no es final. Si podemos asociar p2, que es otra
 		// referencia, asignarle el valor de la referencia
-		// de p, que es final. Y al no ser p2 una referencia final, pues si que podrimos
+		// de p, que es final. Y al no ser p2 una referencia final, pues si que
+		// podriamos
 		// asignar otro objeto diferente y hacer las
 		// modificaciones correspondientes
 		Persona p2 = p;// otra referencia que apunta al mismo objeto
@@ -59,9 +60,9 @@ public class EjemploVariablesFinal {
 
 	}
 
-	public static Persona metodoConParametroFinal(final Persona p) {// preciamos como usar final asociado a objetos, a
+	public static Persona metodoConParametroFinal(final Persona p) {// apreciamos como usar final asociado a objetos, a
 																	// la hora de definir los argumentos que recibe un
-																	// metodo. podriamos indicar que el
+																	// metodo. Podriamos indicar que el
 																	// metodoConPrametrosFinal() va a recibir una
 																	// persona, esa persona que reciba desde fuera; no
 																	// tiene porque ser final pero cuando se recibe aqui

@@ -110,7 +110,9 @@ public class Persona implements Comparable<Persona>{
 	/*
 	 * Nos permite comparar dos instancias de Persona
 	 * Una persona ser� menor que otra cuando su fecha de nacimiento lo sea
-	 * Aprovechamos el orden definido por LocalDate
+	 * Aprovechamos el orden definido por LocalDate. Ya que tambien implementa la interfaz comparable
+	 * de hecho la gran mayoria de las clases definidas por Java que requieran de poder estableder un orden entre ellas
+	 * ya implementan Comparable
 	 */
 	@Override
 	public int compareTo(Persona p) {

@@ -54,7 +54,7 @@ public class HolaMundo {
 				name = someone;
 				System.out.println("Salut " + name);
 			}
-		};
+		};// termina la clase anonima
 
 		// Clase anonima que no se asigna a ninguna referencia. Esta clase al crearse,
 		// como tal, aqui en medio solo va a tener utilidad si llamamos a algun metodo
@@ -68,15 +68,14 @@ public class HolaMundo {
 			public void greet() {
 				greetSomeone("mundo");
 			}
-  
+
 			@Override
 			public void greetSomeone(String someone) {
 				name = someone;
 				System.out.println("Hola, " + name);
 			}
 
-		}
-		.greet();
+		}.greet();
 
 		englishGreeting.greet();
 		frenchGreeting.greetSomeone("Jean");

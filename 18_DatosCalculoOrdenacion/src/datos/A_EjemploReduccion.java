@@ -25,18 +25,18 @@ public class A_EjemploReduccion {
 		System.out.println(Arrays.toString(array));
 		
 		// Reducimos el stream para quedarnos solamente con el máximo
-		OptionalInt maximo = Arrays.stream(array).reduce(Integer::max);	
+		OptionalInt maximo = Arrays.stream(array).reduce(Integer::max);	//
 
 		String mensajeMaximo = maximo.isPresent() ?"El valor máximo es " + maximo.getAsInt() : "No hay valor máximo";
 		System.out.println(mensajeMaximo);
 		
 		// En este caso, vamos a reducir el stream para quedarnos con la suma 
-		int suma = Arrays.stream(array).reduce(0, (x, y) -> x+y);		
+		int suma = Arrays.stream(array).reduce(0, (x, y) -> x+y);//el "0" es el valor inicial		
 		System.out.println(suma);
 	}
 	
 	public static int[] generarArrayAleatorio() {
-		return new Random().ints(100, 0, 1000).toArray();
+		return new Random().ints(100, 0, 1000).toArray();//
 	}
 
 }

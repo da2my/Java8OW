@@ -21,8 +21,8 @@ public class EjemploBounded {
 		
 		
 		
-		//Esta sentencia produce error, aunque sea una clase generica, porque String no es una clase que extienda de Number
-		//NumericBox<String> stringBox = new NumericBox<>("ï¿½Se puede?");
+//		Esta sentencia produce error, aunque sea una clase generica, porque String no es una clase que extienda de Number
+//		NumericBox<String> stringBox = new NumericBox<>("¿Se puede?");
 
 	}
 

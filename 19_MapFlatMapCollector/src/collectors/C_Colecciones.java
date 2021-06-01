@@ -31,7 +31,7 @@ public class C_Colecciones {
 		List<Empleado> listEmpleados = empleados.stream().collect(Collectors.toList());
 		System.out.println(listEmpleados);
 
-		Map<String, Double> mapEmpleados = empleados.stream().distinct()
+		Map<String, Double> mapEmpleados = empleados.stream().distinct()///////////////////////
 				.collect(Collectors.toMap(Empleado::getNombre, Empleado::getSalario));
 		System.out.println(mapEmpleados);
 

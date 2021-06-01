@@ -18,7 +18,7 @@ public class EjemploPar {
 		
 		System.out.println(pareja1);
 		
-		//pareja1.setObj1("UNO"); //Error de compilación
+		//pareja1.setObj1("UNO"); //Error de compilación porque el tipo esta definido
 		
 		Par<String, String> pareja2 = new Par<>("Hola", "Mundo");
 		

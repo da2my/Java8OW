@@ -33,7 +33,7 @@ public class A_CollectorsBasicos {
 		 * 
 		 */
 		Random r = new Random();
-		List<Integer> numeros =  r.ints(0, 1000).limit(20).boxed().collect(Collectors.toList());
+		List<Integer> numeros =  r.ints(0, 1000).limit(20).boxed().collect(Collectors.toList());//
 		
 		// Colectores "básicos"
 		

@@ -23,7 +23,7 @@ public class EjemploList {
 	public static void main(String[] args) {
 		
 		List<Persona> listaPersonas = new ArrayList<>();
-		//List<Persona> listaPersonas = new LinkedList<>();//Con LinkedList no habria cambio, solo hay qu eimportar el paquete
+		//List<Persona> listaPersonas = new LinkedList<>();//Con LinkedList no habria cambio, solo hay que importar el paquete
 		
 		listaPersonas.add(new Persona("12345678A", "Pepe", "Perez", LocalDate.of(1990, 1, 2)));
 		listaPersonas.add(new Persona("23456789B", "Juan", "Mart�nez", LocalDate.of(1991, 2, 3)));
@@ -53,7 +53,7 @@ public class EjemploList {
 		
 		//Para ordenar, tenemos que aportar un orden diferente
 		//Sera por fecha de nacimiento, a la inversa
-		listaPersonas.sort(new Comparator<Persona>() {//Ordenado por fecha de nacimiento enorden inverso
+		listaPersonas.sort(new Comparator<Persona>() {//Ordenado por fecha de nacimiento en orden inverso
 
 			@Override
 			public int compare(Persona p1, Persona p2) {

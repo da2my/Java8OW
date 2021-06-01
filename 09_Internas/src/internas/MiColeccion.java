@@ -15,7 +15,7 @@ public class MiColeccion {
 
 	public MiColeccion() {// inicializacion con unos valores por defecto
 		for (int i = 0; i < TAM; i++)
-			array[i] = i + 1;//prueba quitando la suma de 1
+			array[i] = i + 1;// posiciones pares quitando la suma de + 1
 	}
 
 	public void imprimirPares() {// Este es el iterador para imprimir los pares. Y un iterador suele tener 2

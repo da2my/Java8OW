@@ -9,7 +9,7 @@ package polimorfismo.interfaz;
  */
 public interface Base {
 	
-	default public void saludar(String mensaje) {
+	public default void saludar(String mensaje) {
 		System.out.println(mensaje + " desde Base");
 	}
 

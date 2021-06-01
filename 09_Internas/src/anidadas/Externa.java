@@ -11,7 +11,7 @@ public class Externa {// Una unica clase publica en un fichero Java, no podemos 
 						// Pero si podemos tener dentro de esta clase, algunas clases.
 
 	private int n;
-//	private static int m;
+//	private static int m; //para acceder desde la clase estatica anidad
 
 	public Externa(int n) {
 		this.n = n;
@@ -47,6 +47,13 @@ public class Externa {// Una unica clase publica en un fichero Java, no podemos 
 			return n;
 		}
 
+		@Override
+		public String toString() {
+			return "Anidada [s=" + s + "]";
+		}
+		
+		
+
 	}
 
 	public static class AnidadaEstatica {
@@ -67,11 +74,12 @@ public class Externa {// Una unica clase publica en un fichero Java, no podemos 
 
 		// Como clase interna estatica, no puede acceder
 		// a los atributos de la clase externa.
-		// a no ser que los atributos de la clase externa sean estaticos
+		// a no ser que los atributos de la clase externa sean estaticos. Declaramos "m"
+		// como variable estatica para ver como si la queremos utilizar por aqui se
+		// quita el error
 //		public int getN() {
-//			return m;
+//			return n;//utiliza la "m" en vez de "n" para utilizar este metodo para acceder a un atributo de la clase externa
 //		}
 
 	}
-
 }

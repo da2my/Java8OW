@@ -8,10 +8,11 @@ public class Bicicleta {
 	private int id;
 
 	// Variable est�tica
-	// Compartida para todas las instancias que podramos crear de Bicicleta.
+	// Compartida para todas las instancias que podamos crear de Bicicleta.
 	private static int numeroDeBiciletas = 0;
 
 	public static int getNumeroDeBicicletas() {
+		// Una variable estatica puede ser accedida a traves de metodos staticos.
 		// No podemos usar this, un metodo estatico no tienen acceso al punteto this
 		// porque this sera una referencia a la propia instacia del objeto
 		// return this.numeroDeBiciletas;

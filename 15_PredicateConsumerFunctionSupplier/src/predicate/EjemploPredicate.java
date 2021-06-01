@@ -26,24 +26,23 @@ public class EjemploPredicate {
 		listaPersonas.add(new Persona("23456789B", "Juan", "Martínez", LocalDate.of(1981, 2, 3)));
 		listaPersonas.add(new Persona("34567890C", "Ana", "Ramírez", LocalDate.of(1972, 3, 4)));
 		listaPersonas.add(new Persona("45678901D", "María", "López", LocalDate.of(1993, 4, 5)));
+		listaPersonas.add(new Persona("45621541D", "Carmen", "Haro", LocalDate.of(1993, 4, 5)));
 		
-		
+//		Filtramos para quedarnos solamente con las personas que tengan 35 o mas años
 		listaPersonas
 			.stream()
 			.filter((p) -> p.getEdad() >= 35l)
 			.forEach(System.out::println);
 		
 		
-		Predicate<Persona> edad = (p) -> p.getEdad() >= 35l;
-		Predicate<Persona> nombre = (p) -> p.getApellidos().contains("e");
-		Predicate<Persona> complejo = edad.or(nombre);
+		Predicate<Persona> edad = (p) -> p.getEdad() >= 35l;//condicion 
+		Predicate<Persona> nombre = (p) -> p.getApellidos().contains("e");//condicion 
+		Predicate<Persona> complejo = edad.or(nombre);//condicion que contiene 2 condiciones
 		
 		System.out.println("");
 		listaPersonas
 			.stream()
 			.filter(complejo)
-			.forEach(System.out::println);		
-		
+			.forEach(System.out::println);				
 	}
-
 }

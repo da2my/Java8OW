@@ -21,7 +21,7 @@ public class EjemploFuncional {
 		
 		List<String> lista = Arrays.asList("En", "un", "lugar", "de", "La", "Mancha");
 		
-		Collections.sort(lista, new Comparator<String>() {
+		Collections.sort(lista, new Comparator<String>() {//Ctrl + 1 para convertirlo en expresion Lambda
 
 			//Ordenamos la cadena por su longitud
 			@Override
@@ -34,7 +34,7 @@ public class EjemploFuncional {
 		//Con lambda
 		Collections.sort(lista, (str1, str2)-> str1.length()-str2.length());
 		
-		lista.forEach(System.out::println);
+		lista.forEach(System.out::println);//metodo forEach() nuevo que esta a partir de Java 8
 
 	}
 

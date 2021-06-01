@@ -28,7 +28,7 @@ public enum Planeta {//se definen unos conjuntos cerrados de valores, indicando 
 		this.radio = radio;
 	}
 	
-	//getters que nos permiten saber la masa y el rradio de cada uno de los planetas
+	//getters que nos permiten saber la masa y el radio de cada uno de los planetas
 	double masa() { return masa; }
 	double radio() { return radio; }
 	
