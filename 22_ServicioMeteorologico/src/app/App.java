@@ -27,7 +27,7 @@ public class App {
 	public static void main(String[] args) {
 
 		// Recogemos los datos e iniciamos el servicio
-		servicio = new ServicioClimatologia(Init.getAll());
+		servicio = new ServicioClimatologia(Init.getAll());//se podria implementar este servicio con el patron Singleton
 
 		//Imprimimos el informe meteorológico
 		imprimirInformeMeteorologico();
@@ -43,7 +43,7 @@ public class App {
 		minimaPorProvincias();
 		mediasPorProvincias();
 
-		datosPorProvincia("CANTABRIA");
+		datosPorProvincia("Granada");
 
 	}
 

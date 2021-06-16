@@ -19,7 +19,7 @@ public class StreamFilterMap {
 	 */
 	public static void main(String[] args) {
 
-		Map<Integer, Persona> personas = new HashMap<>();
+		Map<Integer, Persona> personas = new HashMap<>();//estructura clave, valor, HashMap. clave es el id como numero del 1 al 10 y valor es una Persona
 		personas.put(1, new Persona("Ana", LocalDate.of(1930, 12, 20)));
 		personas.put(2, new Persona("Jesús", LocalDate.of(1931, 3, 13)));
 		personas.put(3, new Persona("Miguel", LocalDate.of(1943, 8, 1)));
@@ -31,11 +31,11 @@ public class StreamFilterMap {
 		personas.put(9, new Persona("Alberto", LocalDate.of(2000, 1, 2)));
 		personas.put(10, new Persona("Maria", LocalDate.of(2002, 4, 21)));
 		
-		System.out.println("PERSONAS CON ID >= 5");
-		personas.entrySet()
+		System.out.println("PERSONAS CON ID >= 5");//filtrado en funcion de la clave
+		personas.entrySet()//para trabajar con Streams sobre un map necesitamos obtener un set de entradas con el metodo entrySet(). Y poder trabajar con Stream sobre ese set
 			.stream()
 			.filter(map -> map.getKey() >= 5)
-			.collect(Collectors.toMap(p -> p.getKey(), p -> p.getValue()))
+			.collect(Collectors.toMap(p -> p.getKey(), p -> p.getValue()))//Recolectar un map en otro nuevo map || 
 			.forEach((key, value) -> System.out.printf("%d: %s%n", key, value.getNombre()));
 		System.out.println("");
 		

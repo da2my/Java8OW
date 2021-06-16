@@ -34,14 +34,14 @@ public class ReferenciasMetodos {
 		
 		// Expresión lambda "amplia"
 		personas.sort((Persona p1, Persona p2) -> {
-			return p1.getFechaNacimiento().compareTo(p2.getFechaNacimiento());
+			return p1.getFechaNacimiento().compareTo(p2.getFechaNacimiento());//proporcionamos explicitamente los tipos
 		});
 		System.out.println("MÉTODO 1");
 		System.out.println(personas);
 		System.out.println("");
 		
 		// Expresión lambda más abreviada
-		personas.sort((p1, p2) -> p1.getFechaNacimiento().compareTo(p2.getFechaNacimiento()));
+		personas.sort((p1, p2) -> p1.getFechaNacimiento().compareTo(p2.getFechaNacimiento()));//tipos inferidos del contexto
 		System.out.println("MÉTODO 2");
 		System.out.println(personas);
 		System.out.println("");
@@ -60,8 +60,8 @@ public class ReferenciasMetodos {
 		
 		// Referencia a un método de instancia de un objeto en particular
 		
-		ComparadorPersonas comparadorPersonas = new ComparadorPersonas();
-		personas.sort(comparadorPersonas::compararPorNombre);
+		ComparadorPersonas comparadorPersonas = new ComparadorPersonas();//podemos pensar en el como una especie de proveedor de comparador
+		personas.sort(comparadorPersonas::compararPorNombre);//super conciso...
 		System.out.println("PERSONAS ORDENADAS POR NOMBRE");
 		System.out.println(personas);
 		System.out.println("");

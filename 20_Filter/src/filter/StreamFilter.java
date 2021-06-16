@@ -39,9 +39,9 @@ public class StreamFilter {
 		System.out.println("PERSONAS MAYORES DE 18 AÑOS");
 		personas
 			.stream()
-			.filter(p -> p.getEdad() >= 18)
-			.map(Persona::getNombre)
-			.forEach(System.out::println);
+			.filter(p -> p.getEdad() >= 18)//filtrado
+			.map(Persona::getNombre)//mapeo para quedarnos solo con el nombre
+			.forEach(System.out::println);//e imprimirlo por consola
 		System.out.println("");
 		
 		
@@ -49,27 +49,27 @@ public class StreamFilter {
 		System.out.println("PERSONAS EN EDAD ACTIVA (18-65 AÑOS)");
 		personas
 			.stream()
-			.filter(p -> p.getEdad() >= 18 && p.getEdad() <= 65)
+			.filter(p -> p.getEdad() >= 18 && p.getEdad() <= 65)//Se da un predicado al metodo filter -> filter(predicado)
 			.forEach(persona -> System.out.printf("%s (%d años)%n", persona.getNombre(), persona.getEdad()));
 		System.out.println("");
 
 		// Obtener el número de personas que cumplen una condición
 		long nPersonas = personas
 				.stream()
-				.filter(p -> p.getFechaNacimiento().getYear() >= 2001)
+				.filter(p -> p.getFechaNacimiento().getYear() >= 2001)//nacido a partir del siglo 21
 				.count();
 		System.out.printf("Nº PERSONAS QUE HAN NACIDO EN EL SIGLO XXI: %d%n", nPersonas);
 		
-		// Agrupar las personas que cumplen una condición
+		// Agrupar las personas que cumplen una condición || con colectores de agrupamiento
 		System.out.println("PERSONAS MAYORES DE EDAD, AGRUPADOS POR EDAD");
 		personas
 				.stream()
-				.filter(p -> p.getEdad() >= 18)
-				.collect(Collectors.groupingBy(Persona::getEdad, Collectors.counting()))
+				.filter(p -> p.getEdad() >= 18)//se selecciona con esta condicion
+				.collect(Collectors.groupingBy(Persona::getEdad, Collectors.counting()))//y se agrupan para que aparezcan por cantidad de personas con esa edad
 				.forEach((edad, numero) -> System.out.printf("%d años: %d personas%n", edad, numero));
 				
 		
-		// Condiciones "más complejas"
+		// Condiciones "más complejas" || definir un filtro para buscar a una persona en particular y componer ese predicado || componiendo predicados
 		
 		Persona p1 = personas
 						.stream()

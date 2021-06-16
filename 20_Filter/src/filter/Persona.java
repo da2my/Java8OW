@@ -4,10 +4,10 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 public class Persona {
-	
+
 	private String nombre;
 	private LocalDate fechaNacimiento;
-	
+
 	public Persona() {
 		this.nombre = "";
 		this.fechaNacimiento = LocalDate.now();
@@ -33,9 +33,15 @@ public class Persona {
 	public void setFechaNacimiento(LocalDate fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
-	
+
 	public int getEdad() {
-		return (int) ChronoUnit.YEARS.between(this.fechaNacimiento, LocalDate.now());
+		return (int) ChronoUnit.YEARS.between(this.fechaNacimiento, LocalDate.now());///////// implementado con api
+																						///////// fechas, devuelve en
+																						///////// años en un long pasado
+																						///////// a int. Calcula
+																						///////// diferencia en años
+																						///////// entre su fecha de
+																						///////// nacimiento y hoy
 	}
 
 	@Override
@@ -73,8 +79,5 @@ public class Persona {
 	public String toString() {
 		return "Persona [nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + "]";
 	}
-	
-	
-	
 
 }
