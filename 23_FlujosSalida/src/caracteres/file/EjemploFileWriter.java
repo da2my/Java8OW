@@ -23,7 +23,7 @@ public class EjemploFileWriter {
 		try {
 			fw = new FileWriter("introquijote.txt");
 			for(char c : intro.toCharArray())
-				fw.write(c);
+				fw.write(c);//escribe en una sola linea caracter a caracter
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
