@@ -23,8 +23,8 @@ public class EjemploFileInputStream {
 		
 		try {
 			fIn = new FileInputStream("primero.dat");
-			int c;
-			while ((c = fIn.read()) != -1) 
+			int c;//donde vamos a almacenar los valores devueltos de read()
+			while ((c = fIn.read()) != -1) //cuando llegue al final del fichero, read() devuelve un -1
 				System.out.println(c);
 		} catch (FileNotFoundException e) {			
 			e.printStackTrace();
